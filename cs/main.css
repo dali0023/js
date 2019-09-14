@@ -1,1 +1,41 @@
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: auto;
+    max-height: 350px;
+    overflow-x: hidden;
+}
+
+li a{
+display: block;
+text-decoration: none;
+background-color:#f1f1f1;
+padding: 10px 18px;
+color: black;
+text-align: center;
+}
+li a:hover{
+    background-color: black;
+    color: white;
+    text-decoration: none;
+
+}
+li a.active_color{
+    background-color: rgb(55, 167, 55);
+    color:white;
+}
+.header_style{
+    height: 70px;
+    width: 100%;
+    text-align: center;
+    background-color: #f5f5f5
+}
+
+
+
+
+
+
 
