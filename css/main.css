@@ -29,10 +29,12 @@ li a.active_color{
 .header_style{
     height: 70px;
     width: 100%;
-    text-align: center;
     background-color: #f5f5f5
 }
+.code_style{
+    background-color:#efefef; 
 
+}
 
 
 
