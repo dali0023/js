@@ -32,7 +32,8 @@ li a.active_color{
     background-color: #f5f5f5
 }
 .code_style{
-    background-color:#efefef; 
+    background-color:#efefef;
+    padding: 15px 22px; 
 
 }
 
