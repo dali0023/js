@@ -32,11 +32,13 @@
                 <nav>
                     <ul>
                         <li><a class="active_color" href="#tools">Tools</a></li>
+                        <li><a href="#output">Output</a></li>
+                        <li><a class="" href="https://htmlcheatsheet.com/js/" target="_blank">Js CheatSheet</a></li>
                         <li><a href="#variables">Variables</a></li>
                         <li><a href="#comments">Comments</a></li>
                         <li><a href="#operators">Operators</a></li>
                         <li><a href="#data_type">Data Type</a></li>
-                        <li><a href="#">Video</a></li>
+                        <li><a href="#condition">If Else</a></li>
                         <li><a href="#">Contact</a></li>
                         <li><a href="#">About Us</a></li>
                         <li><a href="#">Members</a></li>
@@ -74,6 +76,33 @@
                         <li>Edge</li>
                     </ul>
 
+                </section>
+                <section id="output">
+                    <h2 style="text-align: center;">JavaScript Display Possibilities</h2>
+                    <p>JavaScript can "display" data in different ways:</p>
+                    <ol>
+                        <li>Writing into an HTML element, using innerHTML: <br><span style="color: red;">
+                                <nbsp></nbsp>
+                                <nbsp></nbsp>
+                                <nbsp></nbsp> document.getElementById("demo").innerHTML = 5 + 6;
+                            </span></li>
+                        <li>Writing into the HTML output using document.write().
+                            <br><span style="color: red;">
+                                <nbsp></nbsp>
+                                <nbsp></nbsp>
+                                <nbsp></nbsp> document.write(5 + 6);
+                            </span></li>
+                        <li>Writing into an alert box, using window.alert(). <br><span style="color: red;">
+                                <nbsp></nbsp>
+                                <nbsp></nbsp>
+                                <nbsp></nbsp> window.alert(5 + 6);
+                            </span></li>
+                        <li>Writing into the browser console, using console.log().<br><span style="color: red;">
+                                <nbsp></nbsp>
+                                <nbsp></nbsp>
+                                <nbsp></nbsp> console.log(5 + 6);
+                            </span></li>
+                    </ol>
                 </section>
                 <section id="variables">
                     <h2 style="text-align: center;">Variable:</h2>
@@ -292,7 +321,7 @@
                     </div>
                 </section>
 
-                <section id="#data_type">
+                <section id="data_type">
                     <h2>Data Types</h2>
                     <h5>The latest ECMAScript standard defines seven data types:</h5>
                     <ol>
@@ -306,30 +335,118 @@
                     </ol>
                     <p class="code_style">
                         var x; // Now x is undefined <br>
-                        x = 5; // Now x is a Number <br>
-                        y = "John"; // Now x is a String <br>
-                    </p>
+                        x = 5; // Now x is a Number <br><br>
+                        <strong>String:</strong><br>
+                        var y = "John"; //output: john<br>
+                        var x = 16 + "Volvo"; //16Volvo. <br>
+                        <strong>JavaScript evaluates expressions from left to right.</strong> <br>
+                        var x = 16 + 4 + "Volvo"; //output: 20Volvo. <br>
+                        var x = "Volvo" + 16 + 4; //output: Volvo164. <br><br>
+                        <strong>Booleans:</strong> <br>
+                        <span style="color: red;">Booleans can only have two values: true or false.</span> <br>
+                        (x == y) // Returns true <br>
+                        (x == z) // Returns false <br><br>
+                        <strong>JavaScript Objects:</strong><br>
+                        <span style="color: red;">JavaScript objects are written with curly braces {}.
 
+                            Object properties are written as name:value pairs, separated by commas.</span> <br>
+
+                        Example: <br>
+                        var person = {<br>
+                        firstName:"John", <br>
+                        lastName:"Doe", <br>
+                        age:50, <br>
+                        eyeColor:"blue" <br>
+                        };
+                    </p>
+                </section>
+                <section id="condition">
+                    <h2>Condition</h2>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <h5>if Statement</h5>
+                            <p class="code_style">
+                                if (condition) { <br>
+
+                                } <br>
+                            </p>
+                            <h5>Ex:</h5>
+                            <p class="code_style">
+                                var gender= "male"; <br>
+                                if (gender == "male") { <br>
+                                document.write("Yes, I am a male."); <br>
+                                } <br></p>
+                        </div>
+                        <div class="col-md-3">
+                            <h5>The else Statement</h5>
+                            <p class="code_style">
+                                if (condition) { <br> <br>
+
+                                } <br> else { <br> <br>
+
+                                } <br> </p>
+                            <strong>Ex:</strong> <br>
+                            <p class="code_style">
+                                var gender= "male"; <br>
+                                if (gender == "male") { <br>
+                                document.write("Yes, I am a male."); <br>
+                                } <br>
+                                else { <br>
+                                document.write("I am a female."); <br>
+                                } <br>
+                            </p>
+
+                        </div>
+                        <div class="col-md-3">
+                            <h5>The else if Statement</h5>
+                            <p class="code_style">
+                                if (condition1) {
+                                <br>
+                                } else if (condition2) { <br>
+                                <br>
+                                } else {
+                                <br>
+                                } <br>
+                            </p>
+                            <p class="code_style">
+                                <strong>Ex:</strong> <br>
+                                var age= 18; <br>
+                                if (age < 18) { <br>
+                                    document.write("I am a teenager"); <br>
+                                    } <br>
+                                    else if (age>18 && age<30) { <br>
+                                        document.write("I am a Younger."); <br>
+                                        } <br>
+                                        else { <br>
+                                        document.write("I am a old."); <br>
+                                        } <br>
+                            </p>
+                        </div>
+                        <div class="col-md-3">
+
+
+                        </div>
+                    </div>
+
+                </section>
+                <section id="loops">
+                    <h2>The For Loop</h2>
+                    syntax: <br>
+
+                    for (statement 1; statement 2; statement 3) { <br>
+
+                    } <br>
+                    <strong>Example</strong>
+                    <p class="code_style">
+                        for (i = 0; i < 5; i++) { <br>
+                            document.write("I am a male."); <br>
+                            } <br>
+                    </p>
                 </section>
             </div>
         </div>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</body>
-<!-- Optional JavaScript -->
+</body> <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
