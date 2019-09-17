@@ -332,6 +332,150 @@
                             </div>
                         </div>
                 </section>
+                <section>
+                    <div class="row" style="font-size: 14px;">
+                        <div class="col-md-4">
+                            <h4>Function</h4>
+                            <table class="table table-striped table-sm">
+                                <tr>
+                                    <td>
+                                        <strong>function</strong> myFunction(){ <br>
+                                        x= 40, y=90, z= x+y; <br>
+                                        document.write(z);
+                                        } <br>
+                                        myFunction(); <br> <br>
+                                        var x1 = myGf(90,10); <br>
+                                        <strong>function</strong> myGf(a,b){ <br>
+                                        return a*b; <br>
+                                        } <br>
+                                        <strong>document.write(x1);</strong>
+                                    </td>
+                                    <td>
+                                        var x,y,z; <br>
+                                        <strong>function</strong> myLove(){ <br>
+                                        x= 40, y=90, z= x+y; <br>
+                                        return z;
+                                        } <br>
+                                        <strong>document.write(myLove());</strong>
+                                    </td>
+
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="col-md-8">
+                            <h4>Object</h4>
+                            <table class="table table-striped table-sm">
+                                <tr>
+                                    <td>
+                                        var course = <strong>new Object();</strong> <br>
+                                        course.title = "javascript tutorial"; <br>
+                                        course.teacher = "dalim"; <br>
+                                        course.duration = 30; <br>
+                                        course.view = 90; <br>
+                                        <strong>document.write(course.title);</strong>
+                                    </td>
+                                    <td>
+                                        var course = <strong>new Object();</strong> <br>
+                                        course["title"] = "javascript tutorial"; <br>
+                                        course["teacher"] = "dalim"; <br>
+                                        course["duration"] = 30; <br>
+                                        course["view"] = 90; <br>
+                                        <strong> document.write(course.teacher);</strong>
+                                    </td>
+                                    <td>
+                                        var course ={ <br>
+                                        title : "javascript tutorial", <br>
+                                        teacher : "dalim", <br>
+                                        duration : 30, <br>
+                                        view : 90 <br>
+                                        }; <br>
+                                        <strong>document.write(course["duration"]); <br>
+                                            document.write(course.view);</strong>
+                                    </td>
+                                </tr>
+
+                            </table>
+
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h4>Strings</h4>
+                            <table class="table table-striped table-sm">
+                                <tr>
+                                    <td>
+                                        <ol style="list-style-type: none; font-size: 14px;">
+                                            <li>var abc = "my name is nazmul hasan dalim";</li>
+                                            <li>var esc = 'I don\'t \n know'; // \n new line</li>
+                                            <li><strong>var len = abc.length; // string length</strong></li>
+                                            <li>abc.indexOf("lmno"); // find substring, -1 if doesn't contain </li>
+                                            <li>abc.lastIndexOf("lmno"); // last occurance</li>
+                                            <li><strong>abc.slice(3, 6); // cuts out "def", negative values count from
+                                                    behind</strong>
+                                            </li>
+                                            <li>abc.replace("abc","123"); // find and replace, takes regular expressions
+                                            </li>
+                                            <li><strong>abc.toUpperCase(); // convert to upper case</strong></li>
+                                            <li>abc.toLowerCase(); // convert to lower case</li>
+                                            <li><strong>abc.concat(" ", str2); // abc + " " + str2</strong></li>
+                                            <li> abc.charAt(2); // character at index: "c"</li>
+                                            <li>abc[2]; // unsafe, abc[2] = "C" doesn't work</li>
+                                            <li><strong>abc.charCodeAt(2); // character code at index: "c" ->
+                                                    99</strong></li>
+                                            <li>abc.split(","); // splitting a string on commas gives an array</li>
+                                            <li><strong>abc.split(""); // splitting on characters</strong></li>
+
+                                        </ol>
+                                    </td>
+                                </tr>
+                            </table>
+
+                        </div>
+                        <div class="col-md-6">
+                            <h4>Array</h4>
+                            <table class="table table-striped table-sm">
+                                <tr>
+                                    <td>
+                                        <ol style="list-style-type: none; font-size: 14px;">
+                                            <li> dogs.toString(); // convert to string: results
+                                                "Bulldog,Beagle,Labrador"</li>
+                                            <li><strong>dogs.join(" * "); // join: "Bulldog * Beagle *
+                                                    Labrador"</strong></li>
+                                            <li>dogs.pop(); // remove last element</li>
+                                            <li><strong>dogs.push("Chihuahua"); // add new element to the end</strong>
+                                            </li>
+                                            <li>dogs[dogs.length] = "Chihuahua"; // the same as push</li>
+                                            <li><strong>dogs.shift(); // remove first element</strong></li>
+                                            <li>dogs.unshift("Chihuahua"); // add new element to the beginning</li>
+                                            <li><strong>delete dogs[0]; // change element to undefined (not
+                                                    recommended)</strong>
+                                            </li>
+                                            <li>dogs.splice(2, 0, "Pug", "Boxer"); // add elements (where, how many to
+                                                remove,
+                                                element
+                                                list)</li>
+                                            <li><strong>var animals = dogs.concat(cats,birds); // join two arrays (dogs
+                                                    followed by
+                                                    cats and
+                                                    birds)</strong></li>
+                                            <li>dogs.slice(1,4); // elements from [1] to [4-1]</li>
+                                            <li><strong>dogs.sort(); // sort string alphabetically</strong></li>
+                                            <li>dogs.reverse(); // sort string in descending order</li>
+                                            <li><strong>x.sort(function(a, b){return a - b}); // numeric sort</strong>
+                                            </li>
+                                            <li>x.sort(function(a, b){return b - a}); // numeric descending sort</li>
+                                            <li><strong>highest = x[0]; // first item in sorted array is the lowest (or
+                                                    highest)
+                                                    value</strong></li>
+                                        </ol>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </section>
             </div>
         </div>
     </div>
