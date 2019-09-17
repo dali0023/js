@@ -33,11 +33,10 @@
                     <ul>
                         <li><a class="active_color" href="#tools">Tools</a></li>
                         <li><a href="#output">Output</a></li>
-                        <li><a class="" href="https://htmlcheatsheet.com/js/" target="_blank">Js CheatSheet</a></li>
+                        <li><a href="https://htmlcheatsheet.com/js/" target="_blank">Js CheatSheet</a></li>
                         <li><a href="#variables">Variables</a></li>
                         <li><a href="#comments">Comments</a></li>
                         <li><a href="#operators">Operators</a></li>
-                        <li><a href="#data_type">Data Type</a></li>
                         <li><a href="#condition">If Else</a></li>
                         <li><a href="#">Contact</a></li>
                         <li><a href="#">About Us</a></li>
@@ -55,310 +54,208 @@
                 </nav>
             </div>
             <div class="col-md-10">
-                <h1 style="text-align: center" id="tools">Basic tools</h1>
+                <h4 style="text-align: center" id="tools">Basic tools</h4>
                 <section>
-                    <h5>The most popular code editors:</h5>
-                    <ul>
-                        <li>Atom</li>
-                        <li>VS code</li>
-                        <li>Sublime Text</li>
-                    </ul>
-                    <h5>The most popular IDEs:</h5>
-                    <ul style="list-style-type: none">
-                        <li>NetBeans</li>
-                        <li>Aptana</li>
-                        <li>Eclipse</li>
-                    </ul>
-                    <h5>The most popular Browsers:</h5>
-                    <ul>
-                        <li>Firefox</li>
-                        <li>chrome</li>
-                        <li>Edge</li>
-                    </ul>
-
+                    <table class="table table-striped table-sm">
+                        <thead>
+                            <tr>
+                                <th scope="col">Code editors</th>
+                                <th scope="col">most popular IDEs:</th>
+                                <th scope="col">popular Browsers</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <ol>
+                                        <li>Atom</li>
+                                        <li>VS code</li>
+                                        <li>Sublime Text</li>
+                                    </ol>
+                                </td>
+                                <td>
+                                    <ol>
+                                        <li>NetBeans</li>
+                                        <li>Aptana</li>
+                                        <li>Eclipse</li>
+                                    </ol>
+                                </td>
+                                <td>
+                                    <ol>
+                                        <li>Firefox</li>
+                                        <li>chrome</li>
+                                        <li>Edge</li>
+                                    </ol>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </section>
                 <section id="output">
-                    <h2 style="text-align: center;">JavaScript Display Possibilities</h2>
-                    <p>JavaScript can "display" data in different ways:</p>
-                    <ol>
-                        <li>Writing into an HTML element, using innerHTML: <br><span style="color: red;">
-                                <nbsp></nbsp>
-                                <nbsp></nbsp>
-                                <nbsp></nbsp> document.getElementById("demo").innerHTML = 5 + 6;
-                            </span></li>
-                        <li>Writing into the HTML output using document.write().
-                            <br><span style="color: red;">
-                                <nbsp></nbsp>
-                                <nbsp></nbsp>
-                                <nbsp></nbsp> document.write(5 + 6);
-                            </span></li>
-                        <li>Writing into an alert box, using window.alert(). <br><span style="color: red;">
-                                <nbsp></nbsp>
-                                <nbsp></nbsp>
-                                <nbsp></nbsp> window.alert(5 + 6);
-                            </span></li>
-                        <li>Writing into the browser console, using console.log().<br><span style="color: red;">
-                                <nbsp></nbsp>
-                                <nbsp></nbsp>
-                                <nbsp></nbsp> console.log(5 + 6);
-                            </span></li>
-                    </ol>
+                    <h4 style="text-align: center;">Output</h4>
+                    <table class="table table-striped table-sm">
+                        <thead>
+                            <tr>
+                                <th scope="col">using innerHTML</th>
+                                <th scope="col">HTML output</th>
+                                <th scope="col">alert box</th>
+                                <th scope="col">browser console</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    document.getElementById("demo").innerHTML = 5 + 6;
+                                </td>
+                                <td>
+                                    document.write(5 + 6);
+                                </td>
+                                <td>
+                                    alert(a); <br>
+                                    confirm("Really?"); <br>
+                                    prompt("Your age?","0"); <br>
+                                </td>
+                                <td>
+                                    console.log(a);
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </section>
                 <section id="variables">
-                    <h2 style="text-align: center;">Variable:</h2>
-                    <ol>
-                        <li>JavaScript is CASE SENSITIVE</li>
-                        <li>Var is not required, but using is it best practice</li>
-                        <li>Names must start with a letter, using _, $ in first not good practice.</li>
-                        <li>
-                            <h5>variable names can contain: </h5>
-                            <ol>
-                                <li>letters- x,y,i</li>
-                                <li>numbers- x20</li>
-                                <li>_ (underscore)- _car, _x, my_car</li>
-                                <li>$- </li>
-                            </ol>
-                        </li>
-                        <li>
-                            <h5>variables cannot start with a number</h5>
-                            <ol>
-                                <li>99flavours (<span style="color: red">wrong</span>)</li>
-                                <li>flavours99 (<span style="color:green">Correct</span>)</li>
-                            </ol>
-                        </li>
-                        <li>
-                            <h5>Variables start with lowercase letter: myCar</h5>
-                        </li>
-
-                    </ol>
-                    <div class="row">
-                        <div class="col-md-12 code_style">
-                            <strong>single step: <br></strong>
-                            var year = 2015; <br> <br>
-                            <strong>defining single variables: <br></strong>
-                            var year; <br>
-                            year = 2015; <br> <br>
-                            <strong>defining multiple variables:</strong> <br>
-                            var year, month, day; <br>
-                            year =2012; <br>
-                            month = "May"; <br>
-                            day = 10; <br>
-
-                        </div>
-                    </div>
+                    <h4 style="text-align: center;">Variable:</h4>
+                    <table class="table table-striped table-sm">
+                        <thead>
+                            <tr>
+                                <th scope="col">Rules</th>
+                                <th scope="col">Ex with Data types:</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <ol style="list-style-type: none;">
+                                        <li>JavaScript is CASE SENSITIVE</li>
+                                        <li>Var is not required, but using is it best practice</li>
+                                        <li>Names must start with a letter, using _, $ in first not good practice.</li>
+                                        <li>
+                                            <strong>variable names can contain: </strong>
+                                            <ol>
+                                                <li>letters- x,y,i</li>
+                                                <li>numbers- x20</li>
+                                                <li>_ (underscore)- _car, _x, my_car</li>
+                                                <li>$- </li>
+                                            </ol>
+                                        </li>
+                                        <li>
+                                            <strong>variables cannot start with a number</strong><br>
+                                            <ol>
+                                                <li>99flavours (<span style="color: red">wrong</span>)</li>
+                                                <li>flavours99 (<span style="color:green">Correct</span>)</li>
+                                            </ol>
+                                        </li>
+                                        <li>
+                                            <strong> Variables start with lowercase letter: myCar</strong>
+                                        </li>
+                                    </ol>
+                                </td>
+                                <td>
+                                    <ol style="list-style-type: none;">
+                                        <li>var a;</li>
+                                        <li>var year, month, day; </li>
+                                        <li>var age = 18; <strong>(number)</strong>
+                                        </li>
+                                        <li>var a = 1, b = 2, c = a + b; // one line</li>
+                                        <li><strong>string</strong> <br>
+                                            var name = "Jane"; <br>
+                                            var d = 1 + 2 + "3"; //"33" [number+str = str] <br>
+                                            var x = "Volvo" + 16 + 4; //Volvo164. <br>
+                                            Js evaluates left to right.</li>
+                                        <li>
+                                            var name = {first:"Jane", last:"Doe"}; <strong>(Object)</strong>
+                                        </li>
+                                        <li>
+                                            var truth = false; <strong>(boolean)</strong>
+                                        </li>
+                                        <li>
+                                            var sheets = ["HTML","CSS","JS"]; <strong>(Array)</strong>
+                                        </li>
+                                        <li>
+                                            var a; typeof a; <strong>(undefined)</strong>
+                                        </li>
+                                        <li>
+                                            var a = null; <strong>(null)</strong>
+                                        </li>
+                                        <li>let z = 'zzz'; //local variable <br></li>
+                                    </ol>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </section>
                 <section id="comments">
-                    <h2>Comments</h2>
+                    <h4>Comments</h4>
                     <div class="col-md-12 code_style">
                         <p>
-                            1. Single line comments start with //. <br>
-                            var x = 5; // Declare x, give it the value of 5 <br>
-                            // Declare y, give it the value of x + 2 <br>
-                            var y = x + 2; <br> <br>
-                            2.Multi-line Comments /*. <br>
-                            */ document.getElementById("myH").innerHTML = "My First Page"; <br>
-                            document.getElementById("myP").innerHTML = "My first paragraph."; <br>
-                            */
+                            1. /* Multi line <br>
+                            comment */ <br>
+                            2. // One line
                         </p>
                     </div>
                 </section>
 
                 <section id="operators">
-                    <h2 style="text-align: center;">JavaScript Operators</h2>
-                    <p><a href="https://www.w3schools.com/js/js_comparisons.asp" target="_blank">More examples</a></p>
-                    <h5>Arithmetic Operators</h5>
-                    <table class="table table-bordered">
+                    <h4 style="text-align: center;">JavaScript Operators</h4>
+                    <table class="table table-striped table-sm">
                         <thead>
                             <tr>
-                                <th scope="col">Operator</th>
-                                <th scope="col">Description</th>
+                                <th scope="col">Arithmetic</th>
+                                <th scope="col">Assignment</th>
+                                <th scope="col">Comparison</th>
+                                <th scope="col">type</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <th scope="row">+</th>
-                                <td>Addition</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">-</th>
-                                <td>Subtraction</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">*</th>
-                                <td>Multiplication</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">/</th>
-                                <td>Division</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">%</th>
-                                <td>Modulus (Division Remainder)</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">++</th>
-                                <td>Increment</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">--</th>
-                                <td>Decrement</td>
-                            </tr>
+                                <td>
+                                    <ol style="list-style-type: none;">
+                                        <li>a = b + c - d;</li>
+                                        <li>a = b * (c / d);</li>
+                                        <li>x = 100 % 48;</li>
+                                        <li>a++; b--;</li>
+                                    </ol>
+                                </td>
+                                <td>
+                                    <ol style="list-style-type: none;">
+                                        <li>x+=y same as x=x+y</li>
+                                        <li>x-=y same as x=x-y</li>
+                                        <li>x*=y same as x=x*y</li>
+                                        <li>x/=y same as x=x/y</li>
+                                        <li>x%=y same as x=x%y
+                                        </li>
+                                    </ol>
+                                </td>
+                                <td>
+                                    <ol style="list-style-type: none;">
+                                        <li>x == 8</li>
+                                        <li>x != 8</li>
+                                        <li>x > 8</li>
+                                        <li>x <= 90</li> <li> x>=87</li>
+                                    </ol>
+                                </td>
+                                <td>
+                                    <ol style="list-style-type: none;">
+                                        <li> &&- (x < 10 && y> 1)</li>
+                                        <li>||- (x == 5 || y == 5)</li>
+                                        <li>!- !(x == y)</li>
+                                    </ol>
 
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
-                    <br>
-                    <h5>Assignment Operators:</h5>
-                    x+=y same as x=x+y (same for +, -, *, /, %) <br>
-                    <a href="https://www.w3schools.com/js/js_assignment.asp" target="_blank">More Example</a>
-                    <div class="row">
-                        <div class="col-md-12"> <br>
-                            <h5> JavaScript String Operators</h5>
-                            <p>The + operator can also be used to add (concatenate) strings. </p>
-                            <p class="code_style">
-                                Example:
-                                var txt1 = "John"; <br>
-                                var txt2 = "Doe"; <br>
-                                var txt3 = txt1 + " " + txt2; <br>
-                                The result of txt3 will be: <br>
-                                John Doe</p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12"> <br>
-                            <h5>Adding Strings and Numbers </h5>
-                            <p>Adding two numbers, will return the sum, but adding a number and a string will return a
-                                string: </p>
-                            <p class="code_style">
-                                Example: <br>
-                                var x = 5 + 5; <br>
-                                var y = "5" + 5; <br>
-                                var z = "Hello" + 5; <br>
-                                The result of x, y, and z will be: <br>
-
-                                10 <br>
-                                55 <br>
-                                Hello5 <br>
-                            </p>
-                            <p style="color: red">If you add a number and a string, the result will be a string!</p>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-md-12">
-                            <h5>Comparison Operators</h5>
-                            <table class="table table-bordered">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">Operator</th>
-                                        <th scope="col">Description</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th scope="row">==</th>
-                                        <td>equal to</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">!=</th>
-                                        <td>not equal</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">></th>
-                                        <td>greater than</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">
-                                            < </th> <td>less than</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">>=</th>
-                                        <td>greater than or equal to</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">
-                                            <=</th> <td>less than or equal to</td>
-                                    </tr>
-
-                                </tbody>
-                            </table>
-                            <br>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-md-12">
-                            <h5>Logical Operators</h5>
-                            <table class="table table-bordered">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">Operator</th>
-                                        <th scope="col">Description</th>
-                                        <th scope="col">Example</th>
-
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th scope="row">&&</th>
-                                        <td>and</td>
-                                        <td>(x < 10 && y> 1) is true</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">||</th>
-                                        <td>or</td>
-                                        <td>(x == 5 || y == 5) is false
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">!</th>
-                                        <td>not</td>
-                                        <td>!(x == y) is true</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <br>
-                        </div>
-                    </div>
                 </section>
 
-                <section id="data_type">
-                    <h2>Data Types</h2>
-                    <h5>The latest ECMAScript standard defines seven data types:</h5>
-                    <ol>
-                        <li>Boolean</li>
-                        <li>Null</li>
-                        <li>Undefined</li>
-                        <li>Number</li>
-                        <li>String</li>
-                        <li>Symbol (new in ECMAScript 6)</li>
-                        <li>Object</li>
-                    </ol>
-                    <p class="code_style">
-                        var x; // Now x is undefined <br>
-                        x = 5; // Now x is a Number <br><br>
-                        <strong>String:</strong><br>
-                        var y = "John"; //output: john<br>
-                        var x = 16 + "Volvo"; //16Volvo. <br>
-                        <strong>JavaScript evaluates expressions from left to right.</strong> <br>
-                        var x = 16 + 4 + "Volvo"; //output: 20Volvo. <br>
-                        var x = "Volvo" + 16 + 4; //output: Volvo164. <br><br>
-                        <strong>Booleans:</strong> <br>
-                        <span style="color: red;">Booleans can only have two values: true or false.</span> <br>
-                        (x == y) // Returns true <br>
-                        (x == z) // Returns false <br><br>
-                        <strong>JavaScript Objects:</strong><br>
-                        <span style="color: red;">JavaScript objects are written with curly braces {}.
-
-                            Object properties are written as name:value pairs, separated by commas.</span> <br>
-
-                        Example: <br>
-                        var person = {<br>
-                        firstName:"John", <br>
-                        lastName:"Doe", <br>
-                        age:50, <br>
-                        eyeColor:"blue" <br>
-                        };
-                    </p>
                 </section>
                 <section id="condition">
                     <h2>Condition</h2>
@@ -369,9 +266,6 @@
                                 if (condition) { <br>
 
                                 } <br>
-                            </p>
-                            <h5>Ex:</h5>
-                            <p class="code_style">
                                 var gender= "male"; <br>
                                 if (gender == "male") { <br>
                                 document.write("Yes, I am a male."); <br>
@@ -384,9 +278,7 @@
 
                                 } <br> else { <br> <br>
 
-                                } <br> </p>
-                            <strong>Ex:</strong> <br>
-                            <p class="code_style">
+                                } <br>
                                 var gender= "male"; <br>
                                 if (gender == "male") { <br>
                                 document.write("Yes, I am a male."); <br>
@@ -407,9 +299,6 @@
                                 } else {
                                 <br>
                                 } <br>
-                            </p>
-                            <p class="code_style">
-                                <strong>Ex:</strong> <br>
                                 var age= 18; <br>
                                 if (age < 18) { <br>
                                     document.write("I am a teenager"); <br>
@@ -430,18 +319,55 @@
 
                 </section>
                 <section id="loops">
-                    <h2>The For Loop</h2>
-                    syntax: <br>
-
-                    for (statement 1; statement 2; statement 3) { <br>
-
-                    } <br>
-                    <strong>Example</strong>
-                    <p class="code_style">
-                        for (i = 0; i < 5; i++) { <br>
-                            document.write("I am a male."); <br>
-                            } <br>
-                    </p>
+                    <h4 class="text-center">Loops</h2>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <h5>For Loop</h5>
+                                <p class="code_style">
+                                    for ( ; ; ) { <br>
+                                    } <br>
+                                    for (i = 0; i < 5; i++) { <br>
+                                        document.write("I am a male."); <br>
+                                        } <br>
+                                </p>
+                            </div>
+                            <div class="col-md-3">
+                                <h5>For/in Loop (object print)</h5>
+                                <p class="code_style">syntax: <br>
+                                    for (x in object) { <br>
+                                    } <br>
+                                    var string1 = ""; <br>
+                                    var obj = {a: 1, b: 2, c: 3}; <br>
+                                    for (var property1 in obj) { <br>
+                                    string1 += obj[property1]; <br>
+                                    } <br>
+                                    console.log(string1);
+                                </p>
+                            </div>
+                            <div class="col-md-3">
+                                <h5>For/Of Loop (Array/string)</h5>
+                                <p class="code_style">syntax: <br>
+                                    for (vari in array/string) { <br>
+                                    } <br>
+                                    var cars = ["a","b","c"]; <br>
+                                    var x; <br>
+                                    for (x of cars) { <br>
+                                    document.write(x + "<br>"); <br>
+                                    } <br>
+                                </p>
+                            </div>
+                            <div class="col-md-3">
+                                <h5>while loop</h5>
+                                <p class="code_style">
+                                    while (condition) { <br>
+                                    } <br>
+                                    while (i < 10) { <br>
+                                        document.write(i); <br>
+                                        i++; <br>
+                                        } <br>
+                                </p>
+                            </div>
+                        </div>
                 </section>
             </div>
         </div>
