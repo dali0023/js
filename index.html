@@ -412,10 +412,12 @@
                                             <li><strong>var len = abc.length; // string length</strong></li>
                                             <li>abc.indexOf("lmno"); // find substring, -1 if doesn't contain </li>
                                             <li>abc.lastIndexOf("lmno"); // last occurance</li>
-                                            <li><strong>abc.slice(3, 6); // cuts out "def", negative values count from
+                                            <li><strong>abc.slice(3, 6); // cuts out "def", negative values count
+                                                    from
                                                     behind</strong>
                                             </li>
-                                            <li>abc.replace("abc","123"); // find and replace, takes regular expressions
+                                            <li>abc.replace("abc","123"); // find and replace, takes regular
+                                                expressions
                                             </li>
                                             <li><strong>abc.toUpperCase(); // convert to upper case</strong></li>
                                             <li>abc.toLowerCase(); // convert to lower case</li>
@@ -437,39 +439,54 @@
                             <h4>Array</h4>
                             <table class="table table-striped table-sm">
                                 <tr>
-                                    <td>
-                                        <ol style="list-style-type: none; font-size: 14px;">
-                                            <li> dogs.toString(); // convert to string: results
-                                                "Bulldog,Beagle,Labrador"</li>
-                                            <li><strong>dogs.join(" * "); // join: "Bulldog * Beagle *
-                                                    Labrador"</strong></li>
-                                            <li>dogs.pop(); // remove last element</li>
-                                            <li><strong>dogs.push("Chihuahua"); // add new element to the end</strong>
-                                            </li>
-                                            <li>dogs[dogs.length] = "Chihuahua"; // the same as push</li>
-                                            <li><strong>dogs.shift(); // remove first element</strong></li>
-                                            <li>dogs.unshift("Chihuahua"); // add new element to the beginning</li>
-                                            <li><strong>delete dogs[0]; // change element to undefined (not
-                                                    recommended)</strong>
-                                            </li>
-                                            <li>dogs.splice(2, 0, "Pug", "Boxer"); // add elements (where, how many to
-                                                remove,
-                                                element
-                                                list)</li>
-                                            <li><strong>var animals = dogs.concat(cats,birds); // join two arrays (dogs
-                                                    followed by
-                                                    cats and
-                                                    birds)</strong></li>
-                                            <li>dogs.slice(1,4); // elements from [1] to [4-1]</li>
-                                            <li><strong>dogs.sort(); // sort string alphabetically</strong></li>
-                                            <li>dogs.reverse(); // sort string in descending order</li>
-                                            <li><strong>x.sort(function(a, b){return a - b}); // numeric sort</strong>
-                                            </li>
-                                            <li>x.sort(function(a, b){return b - a}); // numeric descending sort</li>
-                                            <li><strong>highest = x[0]; // first item in sorted array is the lowest (or
-                                                    highest)
-                                                    value</strong></li>
-                                        </ol>
+                                    <td style="font-size: 14px;">var dogs = ["Bulldog", "Beagle", "Labrador"]; <br>
+                                        <strong>var dogs = new Array("Bulldog", "Beagle", "Labrador"); // declaration
+                                            <br>
+                                        </strong>
+                                        alert(dogs[1]); // access value at index, first item being [0] <br>
+                                        <strong>dogs[0] = "Bull Terier"; // change the first item </strong><br>
+
+                                        for (var i = 0; i < dogs.length; i++) { <br>
+                                            <strong>// parsing with array.length
+                                                console.log(dogs[i]); }</strong> <br>
+                                            <ol style="list-style-type: none; font-size: 14px;"> <br>
+                                                <li> dogs.toString(); // convert to string: results
+                                                    "Bulldog,Beagle,Labrador"</li>
+                                                <li><strong>dogs.join(" * "); // join: "Bulldog * Beagle *
+                                                        Labrador"</strong></li>
+                                                <li>dogs.pop(); // remove last element</li>
+                                                <li><strong>dogs.push("Chihuahua"); // add new element to the
+                                                        end</strong>
+                                                </li>
+                                                <li>dogs[dogs.length] = "Chihuahua"; // the same as push</li>
+                                                <li><strong>dogs.shift(); // remove first element</strong></li>
+                                                <li>dogs.unshift("Chihuahua"); // add new element to the beginning</li>
+                                                <li><strong>delete dogs[0]; // change element to undefined (not
+                                                        recommended)</strong>
+                                                </li>
+                                                <li>dogs.splice(2, 0, "Pug", "Boxer"); // add elements (where, how many
+                                                    to
+                                                    remove,
+                                                    element
+                                                    list)</li>
+                                                <li><strong>var animals = dogs.concat(cats,birds); // join two arrays
+                                                        (dogs
+                                                        followed by
+                                                        cats and
+                                                        birds)</strong></li>
+                                                <li>dogs.slice(1,4); // elements from [1] to [4-1]</li>
+                                                <li><strong>dogs.sort(); // sort string alphabetically</strong></li>
+                                                <li>dogs.reverse(); // sort string in descending order</li>
+                                                <li><strong>x.sort(function(a, b){return a - b}); // numeric
+                                                        sort</strong>
+                                                </li>
+                                                <li>x.sort(function(a, b){return b - a}); // numeric descending sort
+                                                </li>
+                                                <li><strong>highest = x[0]; // first item in sorted array is the lowest
+                                                        (or
+                                                        highest)
+                                                        value</strong></li>
+                                            </ol>
                                     </td>
                                 </tr>
                             </table>
